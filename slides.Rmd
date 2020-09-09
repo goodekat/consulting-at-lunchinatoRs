@@ -1,0 +1,124 @@
+---
+title: "Tips and Resources for Getting Help with R"
+subtitle: "Statistics Consulting Group"
+date: "October 2, 2020"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+---
+
+<style>
+.remark-slide-content {
+  background-color: #FFFFFF;
+  border-top: 80px solid #133b5c;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+.inverse {
+  background-color: #133b5c;
+  text-shadow: none;
+}
+.title-slide {
+  background-color: #FFFFFF;
+  border-top: 80px solid #FFFFFF;
+}
+hr, .title-slide h2::after, .mline h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: #64958f;
+  color: #64958f;
+  height: 1px;
+}
+.remark-slide-number {
+  position: inherit;
+}
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #64958f;
+}
+</style>
+
+```{r setup, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+# Load packages
+library(knitr)
+library(tidyverse)
+```
+
+# Overview
+
+1. Statistics Consulting Group
+
+2. Helping Yourself
+
+3. Getting Help from Others
+
+4. Work Flow in R
+
+---
+
+class: inverse, center, middle
+
+#  Statistics Consulting Group
+
+---
+
+# Current Consultants
+
+## AES
+
+- Audrey McCombs
+- Katherine Goode
+- Haoyan Hu
+- Yudi Zhang
+- Miranda Tilton
+
+## Buisness
+
+- Haoyan Hu
+
+## Engineering
+
+- Miranda Tilton
+
+---
+
+class: inverse, center, middle
+
+#  Helping Yourself
+
+---
+
+class: inverse, center, middle
+
+#  Getting Help from Others
+
+---
+
+class: inverse, center, middle
+
+# Work Flow in R
+
+---
