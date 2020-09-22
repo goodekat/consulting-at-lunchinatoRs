@@ -110,6 +110,30 @@ class: inverse, center, middle
 #  Helping Yourself
 
 ---
+#  Methods
+
+### R documentation
+Search a package manual from CRAN, e.g. [dplyr documentation](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf).
+
+### Vignettes
+
+A vignette is like a book chapter or an academic paper: it can describe the problem that a package is designed to solve, and then show the reader how to solve it. A vignette should divide functions into useful categories, and demonstrate how to coordinate multiple functions to solve problems. Usage:
+
+`browseVignettes("pkg_name")` or `vignette("pkg_name")`
+
+---
+#  Methods (Cont')
+
+### Get help from RStudio 
+- Find explanations and examples from RStudio
+    - `help(function)` or `help(package = "pkg_name")`
+    - `?pkg_name::function` or `?function`
+    - `example("function")`
+    
+```{r, echo = TRUE, eval = TRUE}
+example("mean")
+```
+---
 
 class: inverse, center, middle
 
