@@ -59,7 +59,7 @@ hr, .title-slide h2::after, .mline h1::after {
 }
 </style>
 
-```{r setup, echo = FALSE, message = FALSE}
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 # Load packages
@@ -122,3 +122,104 @@ class: inverse, center, middle
 # Work Flow in R
 
 ---
+
+# WTF
+
+- *<u>W</u>hat <u>T</u>hey <u>F</u>orgot to Teach You About R*
+    - Book by [Jenny Bryan](https://jennybryan.org/about/) and [Jim Hester](https://www.jimhester.com/) (of [RStudio](https://rstudio.com/))
+    - Available online at [rstats.wtf](https://rstats.wtf/)
+
+<br><br>
+
+.font80[
+> The initial impetus for creating these materials is a two-day hands-on workshop. The target learner:
+> 
+> * Has a moderate amount of R and RStudio experience.
+> * Is largely self-taught.
+> * Suspects they have drifted into some idiosyncratic habits that may slow them down or make their work products more brittle.
+> * Is interested in (re)designing their R lifestyle, to be more effective and more self-sufficient.
+.right[-from the Introduction to rstats.wtf]
+]
+
+
+---
+
+# Topics from rstats.wtf
+
+- [Project-oriented workflow](https://rstats.wtf/project-oriented-workflow.html)
+    - Projects help with file organization, version control, and collaboration
+    - Avoid `setwd()`, use relative file paths over fixed
+- [How to name files](https://speakerdeck.com/jennybc/how-to-name-files)
+    - machine readable
+    - human readable
+    - plays well with default ordering
+- [Install a source package](https://rstats.wtf/install-a-source-package.html) (e.g., from GitHub)
+- [Debugging R code](https://rstats.wtf/debugging-r-code.html)
+    - `traceback()`, `print()`, `browser()`, `debug()`, `trace()`, etc.
+- [How to find package source code](https://rstats.wtf/read-the-source.html)
+
+---
+
+# Working with data
+
+```{css, echo=FALSE}
+.navy {
+  color: #000050;
+}
+```
+
+- All data should be described <u>both quantitatively and qualitatively</u>
+- Don't forget to .navy[**visualize your data**]
+    - Summary stats don't give a full picture
+    - E.g., The [DatasauRus Dozen](https://github.com/lockedata/datasauRus) all have the same summary stats and zero correlation
+    
+![](DinoSequential.gif)
+
+---
+
+# Tips for visualization
+
+- Use base R for quick visualizations
+
+```{r, echo = TRUE, eval = FALSE}
+data(diamonds)
+hist(diamonds$price)
+plot(x = diamonds$carat, y = diamonds$price, main = "Price by Carat")
+```
+
+```{r fig.height = 5, fig.width = 10}
+par(mfrow = c(1,2))
+hist(diamonds$price)
+plot(x = diamonds$carat, y = diamonds$price, main = "Price by Carat")
+```
+
+---
+
+# Tips for visualization
+
+- Use [ggplot2](https://ggplot2.tidyverse.org/) for complex or customized visualizations
+
+```{r echo = TRUE, fig.height = 4, fig.width = 10}
+data(diamonds)
+ggplot(diamonds) +
+  geom_point(aes(x = carat, y = price, color = color)) +
+  facet_wrap(~cut, nrow = 1) +
+  theme_bw(base_size = 12)
+```
+
+---
+
+# Additional tools
+
+- [RMarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
+    - <u>Organized</u>: self-contained file of code and output (HTML, PDF, or Word)
+    - <u>Flexible</u>: include paragraphs, figures, tables, LaTeX equations, etc.
+    - <u>Convenient</u>: scroll through results that have already been run
+- The [Tidyverse](https://www.tidyverse.org/packages/) "ecosystem" of packages
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund
+- [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
+    
+    
+
+
+
