@@ -85,6 +85,14 @@ class: inverse, center, middle
 
 ---
 
+# What the consulting group is?
+
+- We are a group of graduate students and professors in the statistics department who assist with statistical analysis in scientific research projects.
+
+- Submit a request at: https://www.stat.iastate.edu/statistical-consulting
+
+---
+
 # Current Consultants
 
 ## AES
@@ -102,6 +110,30 @@ class: inverse, center, middle
 ## Engineering
 
 - Miranda Tilton
+
+---
+
+# What we are able to help with?
+
+- Experimental design, sample size calculations and power analysis
+
+- Suggest statistical methods for data analysis
+
+- Basic data visualization and coding/debugging in R/SAS/JMP
+
+- Interpretation of results
+
+---
+
+# What typical consultations look like?
+
+Example: To study how growth of corn is affected by temperature and drainage.
+
+- Experimental design
+
+- Analysis after pilot study
+
+- Analysis after collecting all data
 
 ---
 
