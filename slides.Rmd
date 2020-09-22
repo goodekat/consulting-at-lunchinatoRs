@@ -173,7 +173,7 @@ class: inverse, center, middle
     - Summary stats don't give a full picture
     - E.g., The [DatasauRus Dozen](https://github.com/lockedata/datasauRus) all have the same summary stats and zero correlation
     
-![](DinoSequential.gif)
+![](img/DinoSequential.gif)
 
 ---
 
