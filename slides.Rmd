@@ -57,7 +57,14 @@ hr, .title-slide h2::after, .mline h1::after {
   height: 100%;
   background-color: #64958f;
 }
+.blue{color: #64958f}
 </style>
+
+```{css, echo = FALSE}
+.tiny{font-size: 40%}
+.medium{font-size: 80%}
+.large{font-size: 90%}
+```
 
 ```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
@@ -139,10 +146,10 @@ Example: To study how growth of corn is affected by temperature and drainage.
 
 class: inverse, center, middle
 
-#  Helping Yourself
+# Helping Yourself
 
 ---
-#  Methods
+# Methods
 
 ### R documentation
 Search a package manual from CRAN, e.g. [dplyr documentation](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf).
@@ -154,7 +161,7 @@ A vignette is like a book chapter or an academic paper: it can describe the prob
 `browseVignettes("pkg_name")` or `vignette("pkg_name")`
 
 ---
-#  Methods (Cont')
+# Methods (Cont')
 
 ### Get help from RStudio 
 - Find explanations and examples from RStudio
@@ -169,8 +176,228 @@ example("mean")
 
 class: inverse, center, middle
 
-#  Getting Help from Others
+# Getting Help from Others
 
+---
+
+# Where to Get Help
+
+.pull-left[
+**Stats Consulting Group** `r emo::ji("smile")`
+
+.large[
+- Help writing code to perform an analysis in R
+  - Examples: GLMs, mixed models, PCA, etc
+  
+- Help creating visualizations (non-publishable versions)
+
+- Interpreting output
+
+- Issues with conflicting output
+
+]
+
+]
+
+.pull-right[
+**Internet Resources**
+
+.large[
+- Sites such as:
+  - [Stack Exchange](https://stats.stackexchange.com/questions/4544/how-does-one-do-a-type-iii-ss-anova-in-r-with-contrast-codes)
+  - [Stack Overflow](https://stackoverflow.com/questions/58980605/correctly-specify-paired-data-in-lmer-mixed-model-in-r)
+  - [R Studio Community](https://community.rstudio.com/)
+
+- Make sure to try your best to find the answer before posting
+
+- Important to post a clear question and a reprex (see upcoming slides)
+
+- Directly contact R package developer (via [GitHub](https://github.com/ropensci/plotly/issues) or [email](https://cran.r-project.org/web/packages/emmeans/index.html))
+]
+]
+
+---
+
+# Keep in Mind
+
+- Try to find the answer yourself first
+
+- Provide a .blue[**focused question**] helps with the process 
+  
+  - Importance of asking the right question
+  - Both for R related and general questions
+  
+- Take into consideration the consultant's/package developer's/etc time
+
+- Provide a .blue[**reprex**] (.blue[**repr**]oducible .blue[**ex**]ample)
+
+  - "The .blue[**goal of a reprex**] is to package your problematic code in such a way that other people can run it and feel your pain. Then, hopefully, they can provide a solution and put you out of your misery." - [Tidyverse help page](https://www.tidyverse.org/help/)
+
+---
+
+# Parts of a reprex
+
+[From RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219): 
+
+.large[
+
+- **Background information**
+  - Describe what you are trying to do. What have you already done?
+  
+- **Complete set up**
+  - Include any library() calls and data to reproduce your issue.
+  
+- **Make it run**
+  - People should be able to copy and paste your code chunk and get the same error.
+  
+- **Minimal** 
+  - Strip away everything that is not directly related to your problem.
+  
+]
+
+---
+
+# Reproducible Example (or reprex)
+
+**Creating a reprex is not always easy:**
+
+- Requires pinpointing the problem in the code
+
+- Requires crafting a small example that someone else can easily run on their computer
+
+- Often enough time is spent creating a reprex that an answer is encountered prior to asking someone else the question! 
+
+<br>
+
+**Additional reading**: [Tidyverse help page](https://www.tidyverse.org/help/), [RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219), [Yihui's blog post](https://yihui.org/en/2017/09/the-minimal-reprex-paradox/), and [reprex R package](https://reprex.tidyverse.org/index.html)
+
+---
+
+# Example 1
+
+Dear Consultant, 
+
+I have written some R code, and it won't run. I've attached the data and R script. Help!
+
+Many thanks,  
+A. Client
+
+.pull-left[
+.tiny[
+```{r eval = FALSE, echo = TRUE}
+df = read.csv("a local/file/path/on/client/computer/data.csv")
+
+df$long_variable.Name_number.1
+
+factor(df$LONG_variable_number.95)
+factor(df$LONG_variable_number.96)
+factor(df$LONG_variable_number.97)
+factor(df$LONG_variable_number.98)
+factor(df$LONG_variable_number.99)
+factor(df$LONG_variable_number.100)
+
+table(long_variable.Name_number.10, long_variable.Name_number.17)
+
+plot(df$y)
+
+m = lm(y ~ LONG_variable_number.100 + LONG_variable_number.99, data = df)
+m = lm(y ~ LONG_variable_number.87 + LONG_variable_number.100, data = df)
+
+df$newvar <- factor(df$trt)
+
+1 + 89
+
+###
+dim(df)
+str(df)
+
+df$trt <- factor(df$trt)
+```
+]
+]
+
+.pull-right[ 
+.tiny[
+```{r eval = FALSE, echo = TRUE}
+
+df$LONG_variable_number.95f <- factor(df$LONG_variable_number.95)
+df$LONG_variable_number.96f <- factor(df$LONG_variable_number.96)
+df$LONG_variable_number.97f <- factor(df$LONG_variable_number.97)
+df$LONG_variable_number.98f <- factor(df$LONG_variable_number.98)
+df$LONG_variable_number.99f <- factor(df$LONG_variable_number.99)
+df$LONG_variable_number.100f <- factor(df$LONG_variable_number.100)
+
+library(ggplot2)
+
+ggplot(df, aes(x = long_variable.Name_number.1, y = long_variable.Name_number.1))
+m = lm(y : trt, data = df)
+summary(m)
+
+na.omit(df)
+rnorm()
+
+m1 = lm(y ~ LONG_variable_number.87 data = df)
+m2 = lm(y ~ LONG_variable_number.18 data = df)
+mB = lm(y ~ LONG_variable_number. data = df)
+plot(mB)
+
+hist(df$LONG_variable_number.95f)
+
+anova(m1)
+anova(m2)
+summary(mB)
+anova(m1)
+```
+]
+]
+
+---
+
+# Example 2
+
+Dear Consultant, 
+
+I've been trying to use the code you wrote for me and apply it to a different dataset, but I am running into problems. Could you please help me? Here is the code:
+
+.medium[
+*df_clean <-*   
+  *df_raw %>%*  
+  *select(-dont_need1, -dont_need2) %>%*  
+  *mutate(trt = factor(trt)) %>%*  
+  *pivot_longer(names_to = "week", values_to = "y", cols = -c(year, trt))*
+  
+*df_clean %>%*  
+  *filter(year == "2019") %>%*  
+  *groupby(trt, week) %>%*  
+  *summarise(mean = mean(y), sd = sd(y))*
+]
+
+Many thanks,  
+A. Client
+
+---
+
+# Example 3
+
+Dear Consultant, 
+
+I am trying to fit a linear regression model like we talked about in our last meeting. I am having some difficulties with the R code. I've attached a small example that demonstrates my error. Could you take a quick look when you have the chance?
+
+Many thanks,  
+A. Client
+
+.large[
+```{r eval = FALSE, echo = TRUE}
+# Example dataset
+df = data.frame(
+  y = rnorm(100, 10, 3),
+  trt = rep(c("A", "B"), each = 50)
+)
+
+# Here is where the error occurs
+m = lm(df, y, trt)
+```
+]
 ---
 
 class: inverse, center, middle
