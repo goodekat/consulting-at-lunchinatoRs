@@ -149,29 +149,68 @@ class: inverse, center, middle
 # Helping Yourself
 
 ---
-# Methods
-
-### R documentation
+# R documentation
 Search a package manual from CRAN, e.g. [dplyr documentation](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf).
 
-### Vignettes
+.pull-left[
+.tiny[
+![](img/google_search.jpeg)
+]
+
+]
+.pull-right[
+.tiny[
+![](img/dplyr_google.jpeg)
+]
+]
+---
+
+# Vignettes
 
 A vignette is like a book chapter or an academic paper: it can describe the problem that a package is designed to solve, and then show the reader how to solve it. A vignette should divide functions into useful categories, and demonstrate how to coordinate multiple functions to solve problems. Usage:
 
 `browseVignettes("pkg_name")` or `vignette("pkg_name")`
 
+.tiny[
+![](img/v2.jpeg)
+]
 ---
-# Methods (Cont')
-
-### Get help from RStudio 
-- Find explanations and examples from RStudio
+# Get help from RStudio 
+- Some useful functions:
     - `help(function)` or `help(package = "pkg_name")`
     - `?pkg_name::function` or `?function`
     - `example("function")`
-    
+
+
+.pull-left[ 
 ```{r, echo = TRUE, eval = TRUE}
 example("mean")
 ```
+]
+
+.pull-right[
+.tiny[
+![](img/r_help3.jpeg)
+]
+]
+
+
+---
+# Get help from RStudio (Cont')
+
+- Search through the `help` and `packages` tabs:
+
+.pull-left[
+.tiny[
+![](img/r_help.jpeg)
+]
+]
+
+.pull-right[
+.tiny[
+![](img/r_help2.jpeg)
+]
+]
 ---
 
 class: inverse, center, middle
