@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Tips and Resources for Getting Help with R</title>
+    <title>The Stat Consultant’s Perspective on Getting Help with R</title>
     <meta charset="utf-8" />
     <meta name="date" content="2020-10-02" />
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
@@ -12,8 +12,8 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Tips and Resources for Getting Help with R
-## Statistics Consulting Group
+# The Stat Consultant’s Perspective on Getting Help with R
+## ISU Statistics Consulting Group
 ### October 2, 2020
 
 ---
@@ -145,26 +145,40 @@ class: inverse, center, middle
 # Helping Yourself
 
 ---
-# Methods
-
-### R documentation
+# R documentation
 Search a package manual from CRAN, e.g. [dplyr documentation](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf).
 
-### Vignettes
+.pull-left[
+.tiny[
+![](img/google_search.jpeg)
+]
+
+]
+.pull-right[
+.tiny[
+![](img/dplyr_google.jpeg)
+]
+]
+---
+
+# Vignettes
 
 A vignette is like a book chapter or an academic paper: it can describe the problem that a package is designed to solve, and then show the reader how to solve it. A vignette should divide functions into useful categories, and demonstrate how to coordinate multiple functions to solve problems. Usage:
 
 `browseVignettes("pkg_name")` or `vignette("pkg_name")`
 
+.tiny[
+![](img/v2.jpeg)
+]
 ---
-# Methods (Cont')
-
-### Get help from RStudio 
-- Find explanations and examples from RStudio
+# Get help from RStudio 
+- Some useful functions:
     - `help(function)` or `help(package = "pkg_name")`
     - `?pkg_name::function` or `?function`
     - `example("function")`
-    
+
+
+.pull-left[ 
 
 ```r
 example("mean")
@@ -179,6 +193,31 @@ example("mean")
 ## mean&gt; c(xm, mean(x, trim = 0.10))
 ## [1] 8.75 5.50
 ```
+]
+
+.pull-right[
+.tiny[
+![](img/r_help3.jpeg)
+]
+]
+
+
+---
+# Get help from RStudio (Cont')
+
+- Search through the `help` and `packages` tabs:
+
+.pull-left[
+.tiny[
+![](img/r_help.jpeg)
+]
+]
+
+.pull-right[
+.tiny[
+![](img/r_help2.jpeg)
+]
+]
 ---
 
 class: inverse, center, middle
@@ -194,13 +233,15 @@ class: inverse, center, middle
 
 .large[
 - Help writing code to perform an analysis in R
-  - Examples: GLMs, mixed models, PCA, etc
+  - Examples: GLMs, mixed models, PCA, etc.
   
 - Help creating visualizations (non-publishable versions)
 
 - Interpreting output
 
 - Issues with conflicting output
+
+- Minor debugging
 
 ]
 
@@ -215,11 +256,12 @@ class: inverse, center, middle
   - [Stack Overflow](https://stackoverflow.com/questions/58980605/correctly-specify-paired-data-in-lmer-mixed-model-in-r)
   - [R Studio Community](https://community.rstudio.com/)
 
+- Directly contact R package developer (via [GitHub](https://github.com/ropensci/plotly/issues) or [email](https://cran.r-project.org/web/packages/emmeans/index.html))
+
 - Make sure to try your best to find the answer before posting
 
 - Important to post a clear question and a reprex (see upcoming slides)
 
-- Directly contact R package developer (via [GitHub](https://github.com/ropensci/plotly/issues) or [email](https://cran.r-project.org/web/packages/emmeans/index.html))
 ]
 ]
 
@@ -229,12 +271,12 @@ class: inverse, center, middle
 
 - Try to find the answer yourself first
 
-- Provide a .blue[**focused question**] helps with the process 
+- Providing a .blue[**focused question**] helps with the process 
   
   - Importance of asking the right question
   - Both for R related and general questions
   
-- Take into consideration the consultant's/package developer's/etc time
+- Take into consideration consultant's/package developer's time
 
 - Provide a .blue[**reprex**] (.blue[**repr**]oducible .blue[**ex**]ample)
 
@@ -244,7 +286,7 @@ class: inverse, center, middle
 
 # Parts of a reprex
 
-[From RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219): 
+A portion of reprex parts description from [RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219): 
 
 .large[
 
@@ -266,7 +308,7 @@ class: inverse, center, middle
 
 # Reproducible Example (or reprex)
 
-**Creating a reprex is not always easy:**
+**Creating a reprex is not necessarily easy:**
 
 - Requires pinpointing the problem in the code
 
@@ -454,18 +496,12 @@ class: inverse, center, middle
 
 # Working with data
 
-&lt;style type="text/css"&gt;
-.navy {
-  color: #000050;
-}
-&lt;/style&gt;
-
 - All data should be described &lt;u&gt;both quantitatively and qualitatively&lt;/u&gt;
-- Don't forget to .navy[**visualize your data**]
+- Don't forget to .blue[**visualize your data**]
     - Summary stats don't give a full picture
-    - E.g., The [DatasauRus Dozen](https://github.com/lockedata/datasauRus) all have the same summary stats and zero correlation
+    - E.g., The [DatasauRus Dozen](https://github.com/lockedata/datasauRus) all have the same summary stats and (near) zero correlation, but...
     
-![](img/DinoSequential.gif)
+![](img/DinoSequential2.gif)
 
 ---
 
@@ -480,7 +516,7 @@ hist(diamonds$price)
 plot(x = diamonds$carat, y = diamonds$price, main = "Price by Carat")
 ```
 
-![](slides_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](slides_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -497,7 +533,7 @@ ggplot(diamonds) +
   theme_bw(base_size = 12)
 ```
 
-![](slides_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](slides_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -506,10 +542,16 @@ ggplot(diamonds) +
 - [RMarkdown](https://rmarkdown.rstudio.com/lesson-1.html)
     - &lt;u&gt;Organized&lt;/u&gt;: self-contained file of code and output (HTML, PDF, or Word)
     - &lt;u&gt;Flexible&lt;/u&gt;: include paragraphs, figures, tables, LaTeX equations, etc.
-    - &lt;u&gt;Convenient&lt;/u&gt;: scroll through results that have already been run
+    - &lt;u&gt;Convenient&lt;/u&gt;: scroll through results/plots that have already been run
 - The [Tidyverse](https://www.tidyverse.org/packages/) "ecosystem" of packages
 - [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund
 - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
+
+---
+
+class: inverse, center, middle
+
+# Thank you
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -1,6 +1,6 @@
 ---
-title: "Tips and Resources for Getting Help with R"
-subtitle: "Statistics Consulting Group"
+title: "The Stat Consultant's Perspective on Getting Help with R"
+subtitle: "ISU Statistics Consulting Group"
 date: "October 2, 2020"
 output:
   xaringan::moon_reader:
@@ -226,13 +226,15 @@ class: inverse, center, middle
 
 .large[
 - Help writing code to perform an analysis in R
-  - Examples: GLMs, mixed models, PCA, etc
+  - Examples: GLMs, mixed models, PCA, etc.
   
 - Help creating visualizations (non-publishable versions)
 
 - Interpreting output
 
 - Issues with conflicting output
+
+- Minor debugging
 
 ]
 
@@ -247,11 +249,12 @@ class: inverse, center, middle
   - [Stack Overflow](https://stackoverflow.com/questions/58980605/correctly-specify-paired-data-in-lmer-mixed-model-in-r)
   - [R Studio Community](https://community.rstudio.com/)
 
+- Directly contact R package developer (via [GitHub](https://github.com/ropensci/plotly/issues) or [email](https://cran.r-project.org/web/packages/emmeans/index.html))
+
 - Make sure to try your best to find the answer before posting
 
 - Important to post a clear question and a reprex (see upcoming slides)
 
-- Directly contact R package developer (via [GitHub](https://github.com/ropensci/plotly/issues) or [email](https://cran.r-project.org/web/packages/emmeans/index.html))
 ]
 ]
 
@@ -261,12 +264,12 @@ class: inverse, center, middle
 
 - Try to find the answer yourself first
 
-- Provide a .blue[**focused question**] helps with the process 
+- Providing a .blue[**focused question**] helps with the process 
   
   - Importance of asking the right question
   - Both for R related and general questions
   
-- Take into consideration the consultant's/package developer's/etc time
+- Take into consideration consultant's/package developer's time
 
 - Provide a .blue[**reprex**] (.blue[**repr**]oducible .blue[**ex**]ample)
 
@@ -276,7 +279,7 @@ class: inverse, center, middle
 
 # Parts of a reprex
 
-[From RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219): 
+A portion of reprex parts description from [RStudio community FAQ](https://community.rstudio.com/t/faq-whats-a-reproducible-example-reprex-and-how-do-i-do-one/5219): 
 
 .large[
 
@@ -298,7 +301,7 @@ class: inverse, center, middle
 
 # Reproducible Example (or reprex)
 
-**Creating a reprex is not always easy:**
+**Creating a reprex is not necessarily easy:**
 
 - Requires pinpointing the problem in the code
 
