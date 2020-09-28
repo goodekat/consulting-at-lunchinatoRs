@@ -98,6 +98,10 @@ class: inverse, center, middle
 
 - Submit a request at: https://www.stat.iastate.edu/statistical-consulting
 
+.tiny[
+![](img/consulting_web.jpeg)
+]
+
 ---
 
 # Current Consultants
@@ -110,7 +114,7 @@ class: inverse, center, middle
 - Yudi Zhang
 - Miranda Tilton
 
-## Buisness
+## Business
 
 - Haoyan Hu
 
@@ -126,7 +130,7 @@ class: inverse, center, middle
 
 - Suggest statistical methods for data analysis
 
-- Basic data visualization and coding/debugging in R/SAS/JMP
+- Basic data visualization and coding in R/SAS/JMP
 
 - Interpretation of results
 
