@@ -1,5 +1,5 @@
 ---
-title: "The Stat Consultant's Perspective on Getting Help with R"
+title: "A Statistical Consultant's Perspective on Getting Help with R"
 subtitle: "ISU Statistics Consulting Group"
 date: "October 2, 2020"
 output:
