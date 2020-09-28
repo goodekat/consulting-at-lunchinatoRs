@@ -6,6 +6,8 @@ This repository contains the materials for the consulting group presentation at 
 
 **Goal**: Provide an overview of resources and methods for getting help with R code
 
+**Slides**: The slides for the talk are available [here](https://goodekat.github.io/consulting-at-lunchinatoRs/slides.html#1).
+
 **Structure of Talk**
 
 1. Overview of the consulting group (Haoyan)
